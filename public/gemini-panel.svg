@@ -1,0 +1,45 @@
+<svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="trazoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" /> 
+      <stop offset="50%" stop-color="#0E7490" /> 
+      <stop offset="100%" stop-color="#10B981" /> 
+    </linearGradient>
+    
+    <linearGradient id="swooshGrad" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6D28D9" /> 
+      <stop offset="100%" stop-color="#1E3A8A" /> 
+    </linearGradient>
+
+    <style>
+      .draw-animation {
+        stroke-dasharray: 600;
+        stroke-dashoffset: 600;
+        animation: draw 2s ease-in-out infinite alternate;
+      }
+      .pulse-animation {
+        animation: pulse 2s ease-in-out infinite alternate;
+        transform-origin: center;
+      }
+      @keyframes draw {
+        from { stroke-dashoffset: 600; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes pulse {
+        0% { transform: scale(0.95); opacity: 0.8; }
+        100% { transform: scale(1.05); opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <path class="pulse-animation" d="M200 80 L235 150 L200 220 L165 150 Z" fill="url(#trazoGrad)" />
+  
+  <path class="draw-animation" d="M90 190 C 130 280, 270 280, 310 150" fill="none" stroke="url(#swooshGrad)" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <path class="pulse-animation" d="M280 100 Q 290 100 290 90 Q 290 100 300 100 Q 290 100 290 110 Q 290 100 280 100 Z" fill="#10B981"/>
+  <path class="pulse-animation" d="M120 130 Q 125 130 125 125 Q 125 130 130 130 Q 125 130 125 135 Q 125 130 120 130 Z" fill="#6D28D9"/>
+
+  <text x="200" y="310" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="52" font-weight="800" fill="#1E3A8A" text-anchor="middle" letter-spacing="1.5">Trazo</text>
+  
+  <text x="200" y="340" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#0E7490" text-anchor="middle" letter-spacing="4">AI WHITEBOARD</text>
+</svg>
