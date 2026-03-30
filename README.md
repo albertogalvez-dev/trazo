@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <strong>Una pizarra con IA pensada para transformar bocetos y texto manuscrito en piezas visuales mas claras sin salir del canvas.</strong>
+  <strong>Una pizarra con IA pensada para transformar bocetos y texto manuscrito en piezas visuales más claras sin salir del canvas.</strong>
 </p>
 
 <p align="center">
@@ -16,43 +16,43 @@
 
 ## Demo
 
-- Demo publica en CubePath: [https://vps23488.cubepath.net/](https://vps23488.cubepath.net/)
-- Repositorio publico: [https://github.com/albertogalvez-dev/trazo](https://github.com/albertogalvez-dev/trazo)
+- Demo pública en CubePath: [https://vps23488.cubepath.net/](https://vps23488.cubepath.net/)
+- Repositorio público: [https://github.com/albertogalvez-dev/trazo](https://github.com/albertogalvez-dev/trazo)
 
 ## Sobre el proyecto
 
-Trazo es una herramienta visual que parte de una idea muy simple: dibujar rapido y mejorar despues.
+Trazo es una herramienta visual que parte de una idea muy simple: dibujar rápido y mejorar después.
 
-En lugar de convertir la experiencia en un chat o en un generador de diagramas desde cero, Trazo trabaja sobre una seleccion real del lienzo. El usuario boceta, selecciona solo la zona que quiere transformar y la IA devuelve una reinterpretacion visual dentro del propio canvas.
+En lugar de convertir la experiencia en un chat o en un generador de diagramas desde cero, Trazo trabaja sobre una selección real del lienzo. El usuario boceta, selecciona solo la zona que quiere transformar y la IA devuelve una reinterpretación visual dentro del propio canvas.
 
-El objetivo es reducir el salto entre una idea rapida y una version mas presentable, manteniendo la inmediatez de la pizarra.
+El objetivo es reducir el salto entre una idea rápida y una versión más presentable, manteniendo la inmediatez de la pizarra.
 
-## Que aporta
+## Qué aporta
 
-- Reinterpretacion visual de bocetos y texto manuscrito
-- Trabajo sobre seleccion real, no sobre prompts aislados
-- Flujo rapido dentro del canvas sin cambiar de herramienta
-- Interfaz guiada y centrada en una sola accion util
-- Demo publica desplegada en CubePath
+- Reinterpretación visual de bocetos y texto manuscrito
+- Trabajo sobre selección real, no sobre prompts aislados
+- Flujo rápido dentro del canvas sin cambiar de herramienta
+- Interfaz guiada y centrada en una sola acción útil
+- Demo pública desplegada en CubePath
 
-## Como se usa
+## Cómo se usa
 
 1. Entras en la pizarra.
 2. Dibujas una idea, una mini interfaz o texto a mano.
 3. Seleccionas la zona que quieres mejorar.
-4. Anades un matiz opcional si quieres orientar el resultado.
+4. Añades un matiz opcional si quieres orientar el resultado.
 5. Pulsas `Reinterpretar`.
-6. Trazo sustituye esa seleccion por una version visual mas cuidada.
+6. Trazo sustituye esa selección por una versión visual más cuidada.
 
-## Caracteristicas principales
+## Características principales
 
 - Canvas construido sobre Excalidraw
 - Panel de IA flotante y arrastrable
-- Deteccion real de seleccion
-- Boton `Seleccionar todo`
+- Detección real de selección
+- Botón `Seleccionar todo`
 - Acciones `Reinterpretar` y `Pintar`
-- Campo `Matiz` para afinar la reinterpretacion
-- Tour guiado en espanol
+- Campo `Matiz` para afinar la reinterpretación
+- Tour guiado en español
 - Modal de ayuda personalizado con enlaces del autor
 
 ## Capturas
@@ -83,9 +83,9 @@ El objetivo es reducir el salto entre una idea rapida y una version mas presenta
 
 ## CubePath
 
-Trazo esta desplegado en un VPS de CubePath en Barcelona. La aplicacion se publica con Nginx, corre sobre Node.js y se mantiene viva con PM2.
+Trazo está desplegado en un VPS de CubePath en Barcelona. La aplicación se publica con Nginx, corre sobre Node.js y se mantiene viva con PM2.
 
-He utilizado CubePath como infraestructura de despliegue para publicar Trazo en un entorno accesible, estable y adecuado para presentar el proyecto en produccion durante la hackathon.
+He utilizado CubePath como infraestructura de despliegue para publicar Trazo en un entorno accesible, estable y adecuado para presentar el proyecto en producción durante la hackathon.
 
 ## Autor
 
