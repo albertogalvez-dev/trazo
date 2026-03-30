@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <strong>Whiteboard con IA para convertir bocetos y texto manuscrito en una version visual mas presentada sin salir del canvas.</strong>
+  <strong>Una pizarra con IA pensada para transformar bocetos y texto manuscrito en piezas visuales mas claras sin salir del canvas.</strong>
 </p>
 
 <p align="center">
@@ -19,55 +19,53 @@
 - Demo publica en CubePath: [http://194.26.100.74](http://194.26.100.74)
 - Repositorio publico: [https://github.com/albertogalvez-dev/trazo](https://github.com/albertogalvez-dev/trazo)
 
-## Que es Trazo
+## Sobre el proyecto
 
-Trazo es una pizarra web construida sobre Excalidraw con una capa de IA enfocada a una accion muy concreta: tomar un boceto ya dibujado y reinterpretarlo de forma mas limpia y mas visual dentro del propio lienzo.
+Trazo es una herramienta visual que parte de una idea muy simple: dibujar rapido y mejorar despues.
 
-La idea no es hablar con un chat ni pedir diagramas desde cero. La gracia esta en dibujar rapido, seleccionar solo la zona que te interesa y usar la IA como una herramienta de acabado visual.
+En lugar de convertir la experiencia en un chat o en un generador de diagramas desde cero, Trazo trabaja sobre una seleccion real del lienzo. El usuario boceta, selecciona solo la zona que quiere transformar y la IA devuelve una reinterpretacion visual dentro del propio canvas.
 
-## Que problema resuelve
+El objetivo es reducir el salto entre una idea rapida y una version mas presentable, manteniendo la inmediatez de la pizarra.
 
-Cuando dibujas una idea a mano alzada, el primer boceto sale rapido, pero la version que puedes ensenar suele requerir rehacerlo entero en otra herramienta. Ese salto rompe el ritmo.
+## Que aporta
 
-Trazo intenta reducir esa friccion:
+- Reinterpretacion visual de bocetos y texto manuscrito
+- Trabajo sobre seleccion real, no sobre prompts aislados
+- Flujo rapido dentro del canvas sin cambiar de herramienta
+- Interfaz guiada y centrada en una sola accion util
+- Demo publica desplegada en CubePath
 
-- mantienes la velocidad del boceto libre
-- trabajas sobre una seleccion concreta
-- obtienes una reinterpretacion mas presentada sin salir del canvas
+## Como se usa
 
-## Como funciona
-
-1. Entras en la app y accedes al canvas.
-2. Dibujas un boceto, una interfaz simple o texto manuscrito.
-3. Seleccionas la parte que quieres transformar.
-4. Opcionalmente escribes un matiz corto para orientar el resultado.
+1. Entras en la pizarra.
+2. Dibujas una idea, una mini interfaz o texto a mano.
+3. Seleccionas la zona que quieres mejorar.
+4. Anades un matiz opcional si quieres orientar el resultado.
 5. Pulsas `Reinterpretar`.
-6. Trazo captura esa zona, la envia al modelo de imagen y sustituye la seleccion por un resultado visual mas cuidado.
+6. Trazo sustituye esa seleccion por una version visual mas cuidada.
 
-## Funcionalidades del MVP
+## Caracteristicas principales
 
-- Pantalla de entrada con persistencia del nombre
-- Canvas funcional con Excalidraw
-- Panel de IA lateral flotante y arrastrable
+- Canvas construido sobre Excalidraw
+- Panel de IA flotante y arrastrable
 - Deteccion real de seleccion
 - Boton `Seleccionar todo`
 - Acciones `Reinterpretar` y `Pintar`
-- Campo `Matiz` para afinar la salida
-- Reemplazo de la seleccion por la imagen generada
+- Campo `Matiz` para afinar la reinterpretacion
 - Tour guiado en espanol
 - Modal de ayuda personalizado con enlaces del autor
 
-## Capturas reales
+## Capturas
 
 ### Pantalla de entrada
 
 ![Pantalla de acceso de Trazo](./docs/screenshots/trazo-welcome.png)
 
-### Canvas con panel de IA
+### Canvas y panel de IA
 
 ![Canvas y panel de IA de Trazo](./docs/screenshots/trazo-workspace.png)
 
-### Modal de ayuda personalizado
+### Ayuda personalizada
 
 ![Modal de ayuda de Trazo con enlaces del autor](./docs/screenshots/trazo-help.png)
 
@@ -83,49 +81,11 @@ Trazo intenta reducir esa friccion:
 - Nginx
 - PM2
 
-## Ejecucion local
+## CubePath
 
-### Requisitos
+Trazo esta desplegado en un VPS de CubePath en Barcelona. La aplicacion se publica con Nginx, corre sobre Node.js y se mantiene viva con PM2.
 
-- Node.js 20 o superior
-- npm 10 o superior
-
-### Variables de entorno
-
-Crea un archivo `.env.local`:
-
-```env
-VERTEX_EXPRESS_API_KEY=tu_api_key
-TRAZO_AI_MODEL=gemini-2.5-flash-image
-PORT=8787
-```
-
-### Desarrollo
-
-```bash
-npm install
-npm run dev
-```
-
-### Build y arranque local
-
-```bash
-npm run build
-npm run start
-```
-
-## Despliegue en CubePath
-
-Trazo esta desplegado en un VPS de CubePath en Barcelona usando un plan `gp.micro` con Ubuntu 24 e IPv4 publica.
-
-La app se sirve con una configuracion simple:
-
-- `Nginx` expone la demo publica
-- `Node.js` sirve el frontend y la ruta `/api/ai/prepare`
-- `PM2` mantiene el proceso en ejecucion
-- `GitHub` se usa como origen del codigo desplegado
-
-He elegido CubePath porque me permitia levantar una demo publica real muy rapido, con una maquina suficiente para el MVP y dentro del bono inicial del hackathon.
+He utilizado CubePath para levantar una demo publica real del proyecto de forma rapida, con una configuracion simple y suficiente para una aplicacion web de este tipo.
 
 ## Autor
 
