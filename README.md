@@ -116,76 +116,16 @@ npm run start
 
 ## Despliegue en CubePath
 
-Trazo esta desplegado en CubePath y la demo publica actual se sirve directamente desde la IP del VPS.
+Trazo esta desplegado en un VPS de CubePath en Barcelona usando un plan `gp.micro` con Ubuntu 24 e IPv4 publica.
 
-### Configuracion utilizada
+La app se sirve con una configuracion simple:
 
-- Region: Barcelona, Spain
-- Tipo de instancia: General Purpose
-- Plan: `gp.micro`
-- Sistema operativo: Ubuntu 24
-- IPv4 publica activada
+- `Nginx` expone la demo publica
+- `Node.js` sirve el frontend y la ruta `/api/ai/prepare`
+- `PM2` mantiene el proceso en ejecucion
+- `GitHub` se usa como origen del codigo desplegado
 
-### Por que esta configuracion
-
-- mejor latencia para Espana
-- coste ajustado al bono inicial de CubePath
-- recursos suficientes para servir frontend, proxy y proceso Node sin sobredimensionar la maquina
-
-### Arquitectura de despliegue
-
-- `Nginx` expone la app en el puerto 80
-- `Node.js` sirve el build y la ruta `/api/ai/prepare`
-- `PM2` mantiene el proceso vivo
-- `GitHub` se usa como origen del repositorio desplegado en el VPS
-
-### Comandos principales usados en el servidor
-
-```bash
-apt update && apt upgrade -y
-apt install -y git curl ca-certificates gnupg build-essential nginx
-curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
-apt install -y nodejs
-npm install -g pm2
-
-cd /var/www
-git clone https://github.com/albertogalvez-dev/trazo.git
-cd trazo
-npm ci
-npm run build
-pm2 start npm --name trazo -- start
-pm2 save
-```
-
-### Proxy publico con Nginx
-
-```nginx
-server {
-    listen 80;
-    server_name 194.26.100.74 vps23488.cubepath.net;
-
-    location / {
-        proxy_pass http://127.0.0.1:8787;
-        proxy_http_version 1.1;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-    }
-}
-```
-
-## Estado actual
-
-El MVP ya permite completar el flujo principal de extremo a extremo:
-
-- entrar
-- dibujar
-- seleccionar
-- reinterpretar
-- ver el resultado dentro del propio canvas
-
-El punto a mejorar no es la base del producto, sino la calidad visual de algunas reinterpretaciones, especialmente cuando el boceto de partida es muy ambiguo.
+He elegido CubePath porque me permitia levantar una demo publica real muy rapido, con una maquina suficiente para el MVP y dentro del bono inicial del hackathon.
 
 ## Autor
 
