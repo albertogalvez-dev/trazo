@@ -9,14 +9,14 @@
 </p>
 
 <p align="center">
-  <a href="http://194.26.100.74">Demo en vivo</a> |
+  <a href="https://vps23488.cubepath.net/">Demo en vivo</a> |
   <a href="https://github.com/albertogalvez-dev/trazo">Repositorio</a> |
   <a href="https://www.linkedin.com/in/alberto-galvez-aguado/">Autor</a>
 </p>
 
 ## Demo
 
-- Demo publica en CubePath: [http://194.26.100.74](http://194.26.100.74)
+- Demo publica en CubePath: [https://vps23488.cubepath.net/](https://vps23488.cubepath.net/)
 - Repositorio publico: [https://github.com/albertogalvez-dev/trazo](https://github.com/albertogalvez-dev/trazo)
 
 ## Sobre el proyecto
