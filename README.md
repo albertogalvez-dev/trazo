@@ -85,7 +85,7 @@ El objetivo es reducir el salto entre una idea rapida y una version mas presenta
 
 Trazo esta desplegado en un VPS de CubePath en Barcelona. La aplicacion se publica con Nginx, corre sobre Node.js y se mantiene viva con PM2.
 
-He utilizado CubePath para levantar una demo publica real del proyecto de forma rapida, con una configuracion simple y suficiente para una aplicacion web de este tipo.
+He utilizado CubePath como infraestructura de despliegue para publicar Trazo en un entorno accesible, estable y adecuado para presentar el proyecto en produccion durante la hackathon.
 
 ## Autor
 
